@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneClear.C | Cyan Magic Project</title>
+    <style>
+        :root {
+            --cyan-magic: #00B2B2;
+            --ice-cyan-bg: #F0F9FA;
+            --text-color: #222222;
+            --rune-soft: rgba(0, 178, 178, 0.25);
+            --signature-color: rgba(0, 150, 150, 0.12);
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+            background-color: var(--ice-cyan-bg);
+            color: var(--text-color);
+            margin: 0; padding: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-header { position: relative; width: 100%; background-color: #FFFFFF; line-height: 0; }
+        .header-image { width: 100%; height: auto; display: block; }
+        
+        .header-signature {
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            font-family: serif;
+            font-size: 0.65rem;
+            color: var(--signature-color);
+            letter-spacing: 5px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
+
+        .concept-card {
+            background: #FFFFFF;
+            padding: 40px;
+            border-top: 4px solid var(--cyan-magic);
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+        h2 { color: var(--cyan-magic); font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 25px; }
+
+        .preset-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        .preset-item {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        .incantation-box {
+            margin-top: 25px;
+            padding: 12px 18px;
+            border-left: 3px solid var(--rune-soft);
+            background: rgba(0, 178, 178, 0.02);
+        }
+        .rune-deco {
+            display: block;
+            color: var(--rune-soft);
+            font-size: 0.8rem;
+            letter-spacing: 12px;
+            margin-bottom: 6px;
+        }
+        .incantation-text {
+            font-family: serif;
+            font-style: italic;
+            color: #889;
+            font-size: 0.88rem;
+            display: block;
+        }
+
+        .preset-name { display: block; font-size: 1.8rem; font-weight: 800; color: var(--cyan-magic); margin-bottom: 10px; }
+        .badge { background: var(--cyan-magic); color: #fff; font-size: 0.7rem; padding: 2px 10px; border-radius: 2px; vertical-align: middle; margin-left: 10px; }
+        .main-desc { font-size: 1.15rem; font-weight: 600; color: #333; margin-bottom: 10px; }
+        .sub-desc { font-size: 0.95rem; color: #666; margin-bottom: 15px; }
+
+        /* 技術情報セクション：黒い塊を廃止し、繊細なデザインへ */
+        .tech-info { 
+            margin-top: 60px; 
+            padding: 25px; 
+            border-top: 1px solid rgba(0, 178, 178, 0.15);
+            text-align: center;
+            font-family: monospace;
+            color: #777;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+        .tech-info strong { color: var(--cyan-magic); font-weight: normal; }
+
+        /* フッター：透明感を出し、署名を刻印化 */
+        footer { 
+            text-align: center; 
+            padding: 60px 20px 100px; 
+            background: transparent;
+        }
+        .footer-copy { color: #aaa; font-size: 0.75rem; margin-bottom: 8px; }
+        .footer-brand { 
+            color: #ccc; 
+            font-size: 0.65rem; 
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <img src="OneClear.C HPHD.jpg" alt="OneClear.C" class="header-image">
+        <div class="header-signature">ᚣᛟᛋᚻᛁᚳᚫᚹᚫ ᛏᚫᛏᛋᚢᚣᚫ</div>
+    </header>
+
+    <div class="container">
+        <section class="concept-card">
+            <h2>Professional Profile: OneClear.C</h2>
+            <p><strong>「スマホ録音を、プロスタジオのクオリティへ。」</strong></p>
+            <p>OneClear.Cは、妥協なきエンジニアリングが生んだプロ仕様の音声処理ツール。独自の「クリスタライザー」が音の粒子を磨き上げ、一撃で圧倒的な明瞭度を解き放つ。これこそが、シアンマジックの正体です。</p>
+        </section>
+
+        <div class="preset-grid">
+            <div class="preset-item">
+                <span class="preset-name">Crystal Core <span class="badge">Vocal Focused</span></span>
+                <p class="main-desc">OneClear.Cの絶対基盤。歌声の芯を太く描き出すボーカル特化エンジン。</p>
+                <p class="sub-desc">プロのボーカルチェーンをシミュレート。曇りを削ぎ落とし、ミックスの中でも埋もれない主役の「届く声」を実現。※隠し味「クリスタライザー」標準調合。</p>
+                
+                <div class="incantation-box">
+                    <span class="rune-deco">ᚦ ᛝ ᚱ ᚴ ᛟ</span>
+                    <span class="incantation-text">「深淵の静寂を糧に、真実の響きを此処に。揺るぎなき『核』となりて、世界を射抜く光を綴れ。」</span>
+                </div>
+            </div>
+
+            <div class="preset-item">
+                <span class="preset-name">Crystal Resonance <span class="badge">Professional afir</span></span>
+                <p class="main-desc">究極の音響共鳴。`afir` エンジンによるプロ仕様の空間深度の構築。</p>
+                <p class="sub-desc">厳選されたIRデータと畳み込み演算を実行。デジタル処理の限界を超えた、実在するスタジオの奥行きと磨き上げられた残響を付加します。</p>
+
+                <div class="incantation-box">
+                    <span class="rune-deco">ᚨ ᚠ ᛁ ᚱ ᛋ ᛟ</span>
+                    <span class="incantation-text">「共鳴せよ、万物の深淵。時空の壁を越え、究極の空間を此処に再構成せん。シアンの閃光よ、虚空に響け。」</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-info">
+            Engine: <strong>FFmpeg 6.1 Professional Build</strong> | Status: <strong>All Magic is Local</strong>
+        </div>
+
+        <footer>
+            <div class="footer-copy">&copy; 2026 Cyan Magic Project</div>
+            <div class="footer-brand">Product: OneClear.C | Engine: ᚣᛟᛋᚻIᚳᚫᚹᚫ</div>
+        </footer>
+    </div>
+
+</body>
+</html>
