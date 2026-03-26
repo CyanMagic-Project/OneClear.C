@@ -132,14 +132,36 @@
         footer { text-align: center; padding: 100px 20px 140px; border-top: 1px solid #eee; background: #fff; }
 
         /* レスポンシブ対応 */
-        @media (max-width: 750px) {
-            .main-catch { font-size: 2.5rem; border-left: 10px solid var(--cyan-magic); padding-left: 20px; }
-            .magic-call { font-size: 1.8rem; }
-            .story-section { padding: 50px 25px !important; }
-            .item-core, .item-resonance { padding: 50px 25px !important; }
-            .luan-asset { opacity: 0.12; z-index: 0; filter: grayscale(1); }
-            .roadmap-title { font-size: 1.6rem; }
-        }
+        /* レスポンシブ対応：スマホではルアン君を「文字の上」に配置 */
+@media (max-width: 750px) {
+    .main-catch { font-size: 2.2rem; border-left: 10px solid var(--cyan-magic); padding-left: 20px; margin: 40px 0; line-height: 1.3; }
+    .magic-call { font-size: 1.5rem; letter-spacing: 1px; }
+    .magic-invite { font-size: 1.1rem; }
+
+    /* セクションのパディング調整（左右の余白を確保） */
+    .story-section, .item-core, .item-resonance { 
+        padding: 40px 20px !important; 
+        text-align: center; /* スマホでは中央寄せが綺麗です */
+    }
+
+    /* ★ルアン君を「縦並び」に調整：重ならずにハッキリ見える！ */
+    .luan-asset { 
+        position: static; /* 重なり（絶対配置）を解除 */
+        opacity: 1.0 !important; /* 100%の濃さ */
+        filter: none !important; /* 白黒解除 */
+        display: block;
+        margin: 0 auto 20px; /* 下に20pxの隙間を作って文字と離す */
+        width: 140px; /* スマホで邪魔にならないサイズ */
+        height: auto;
+    }
+
+    /* 文字が入る部分の余白（パディング）をリセット */
+    .story-section { padding-right: 20px !important; }
+    .item-core { padding-left: 20px !important; }
+    .item-resonance { padding-right: 20px !important; }
+    
+    .roadmap-title { font-size: 1.5rem; }
+}
     </style>
 </head>
 <body>
