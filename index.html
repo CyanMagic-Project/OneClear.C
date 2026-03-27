@@ -11,9 +11,11 @@
             --text-color: #222222;
             --rune-soft: rgba(0, 178, 178, 0.25);
             --signature-color: rgba(0, 150, 150, 0.12);
+            --whisper-bg: rgba(0, 178, 178, 0.08);
         }
+        
         body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
             background-color: var(--ice-cyan-bg);
             color: var(--text-color);
             margin: 0; padding: 0;
@@ -21,7 +23,8 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ヘッダー */
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
+
         .main-header { position: relative; width: 100%; background-color: #FFFFFF; line-height: 0; }
         .header-image { width: 100%; height: auto; display: block; }
         .header-signature {
@@ -30,138 +33,97 @@
             letter-spacing: 5px; pointer-events: none; user-select: none;
         }
 
-        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-
-        /* メインコピー */
         .main-catch {
             font-size: 3.5rem; 
             font-weight: 900; color: var(--text-color);
             line-height: 1.2; margin: 80px 0 100px 0; letter-spacing: -2px;
             border-left: 15px solid var(--cyan-magic); padding-left: 30px;
         }
-        .main-catch span { color: var(--cyan-magic); display: block; margin-top: 15px; }
+        .main-catch span { color: var(--cyan-magic); display: block; margin-top: 15px; font-size: 4rem; }
 
-        /* コンセプト（真面目な解説） */
-        .concept-card {
-            background: #FFFFFF; padding: 55px; border-top: 5px solid var(--cyan-magic);
-            margin-bottom: 100px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); position: relative;
-        }
-        .concept-card h2 { color: var(--cyan-magic); font-size: 1.6rem; letter-spacing: 1px; margin-top: 0; margin-bottom: 25px;}
-
-        /* 呼びかけ */
         .magic-call-container { text-align: center; margin: 140px 0 100px; }
         .magic-call {
-            font-size: 2.6rem; font-weight: 800; color: var(--cyan-magic);
+            font-size: 2.8rem; font-weight: 900; color: var(--cyan-magic);
             display: block; margin-bottom: 35px; letter-spacing: 4px;
         }
         .magic-invite { font-size: 1.5rem; font-weight: 600; color: #555; display: block; line-height: 1.8; }
 
-        /* ルアン・セクション：正しいクラス名に修正 */
+        .luan-whisper {
+            background: var(--whisper-bg);
+            border: 1px dashed var(--cyan-magic);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 25px 0 10px 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #007a7a;
+            font-style: italic;
+            position: relative;
+        }
+        .luan-whisper::before {
+            content: "◤ LUAN'S ANALYTICS ◢";
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            color: var(--cyan-magic);
+        }
+
+        .concept-card {
+            background: #FFFFFF; padding: 55px; border-top: 5px solid var(--cyan-magic);
+            margin-bottom: 100px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+        }
+        .concept-card h2 { color: var(--cyan-magic); font-size: 1.8rem; margin-top: 0; font-weight: 800; }
+        .highlight-text { font-size: 1.4rem; font-weight: 800; color: var(--text-color); display: block; margin-bottom: 15px; }
+
         .story-section {
-            background: #FFFFFF; padding: 70px 240px 70px 70px;
+            background: #FFFFFF; padding: 60px 240px 60px 60px;
             margin-bottom: 120px; position: relative; border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
         }
         .luan-asset { position: absolute; z-index: 5; filter: drop-shadow(0 0 15px rgba(0, 178, 178, 0.4)); pointer-events: none; }
         .luan-story-img { width: 240px; right: -30px; bottom: -30px; }
-        .story-title { color: var(--cyan-magic); font-size: 1.8rem; margin-top: 0; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; letter-spacing: 2px;}
-        
         .luan-speech { 
             font-family: 'Hiragino Mincho ProN', serif;
-            color: #333; font-size: 1.3rem; line-height: 2.0; 
-            margin-bottom: 30px; border-left: 5px solid var(--cyan-magic); padding-left: 25px; 
-            font-weight: 500;
+            color: #333; font-size: 1.4rem; line-height: 2.1; 
+            margin: 25px 0; border-left: 5px solid var(--cyan-magic); padding-left: 25px; 
+            font-weight: 600;
         }
 
-        /* プリセット表示：個別のこだわり */
         .preset-grid { display: grid; grid-template-columns: 1fr; gap: 100px; }
-        .preset-item { background: #FFFFFF; padding: 55px; border-radius: 8px; border: 1px solid #eee; position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.01); }
+        .preset-item { background: #FFFFFF; padding: 55px; border-radius: 8px; border: 1px solid #eee; position: relative; }
         .item-core { padding-left: 180px; }
-        /* クラス名を修正 */
-        .luan-core-img { width: 170px; left: -40px; top: 20px; }
+        .luan-core-img { width: 170px; left: -40px; bottom: 20px; }
         .item-resonance { padding-right: 180px; }
-        /* 3枚目の画像用のクラスを追加 */
         .luan-resonance-img { width: 180px; right: -40px; bottom: -20px; }
 
-        .preset-name { display: block; font-size: 1.9rem; font-weight: 800; color: var(--cyan-magic); margin-bottom: 8px; }
-        .badge { background: var(--cyan-magic); color: #fff; font-size: 0.8rem; padding: 4px 14px; vertical-align: middle; margin-left: 12px; border-radius: 3px; }
-        .badge-premium { background: #333; }
+        .preset-name { display: block; font-size: 2rem; font-weight: 900; color: var(--cyan-magic); margin-bottom: 15px; }
+        .kana-name { font-size: 1rem; font-weight: 600; color: #888; margin-left: 10px; vertical-align: middle; }
+        .badge { background: var(--cyan-magic); color: #fff; font-size: 0.8rem; padding: 5px 15px; border-radius: 4px; vertical-align: middle; margin-left: 10px; }
 
-        /* 3本柱リスト */
         .pillar-list {
-            list-style: none; padding: 25px; margin: 30px 0;
-            background: rgba(0, 178, 178, 0.05); border-radius: 8px;
-            border-left: 6px solid var(--cyan-magic);
+            list-style: none; padding: 25px; margin: 25px 0;
+            background: rgba(0, 178, 178, 0.03); border-left: 6px solid var(--cyan-magic);
         }
-        .pillar-list li { margin-bottom: 15px; font-weight: 600; font-size: 1.1rem; }
-        .pillar-list strong { color: var(--cyan-magic); margin-right: 12px; font-size: 1.25rem; }
+        .pillar-list li { margin-bottom: 12px; font-weight: 700; font-size: 1.1rem; }
+        .pillar-list strong { color: var(--cyan-magic); margin-right: 10px; font-size: 1.2rem; }
 
-        /* 詠唱ボックス */
-        .incantation-box {
-            margin-top: 40px; padding: 25px; border-left: 4px solid var(--rune-soft);
-            background: rgba(0, 178, 178, 0.03); border-radius: 0 8px 8px 0;
-        }
-        .rune-deco { display: block; color: var(--rune-soft); font-size: 0.9rem; letter-spacing: 15px; margin-bottom: 10px; }
-        .incantation-text { font-family: serif; font-style: italic; color: #778; font-size: 1.0rem; line-height: 1.6; }
-
-        /* Android制作中・Coming Soon */
         .roadmap-section {
-            text-align: center; margin: 150px 0 100px; padding: 80px 40px;
+            text-align: center; margin: 120px 0; padding: 80px 40px;
             background: #FFFFFF; border: 3px dashed var(--cyan-magic); border-radius: 16px;
+            display: flex; flex-direction: column; align-items: center;
         }
-        .status-badge {
-            display: inline-block; background: var(--cyan-magic); color: #fff;
-            padding: 6px 25px; font-weight: 800; font-size: 1rem; border-radius: 50px;
-            margin-bottom: 25px; letter-spacing: 3px;
+
+        footer { text-align: center; padding: 100px 20px; border-top: 1px solid #eee; background: #fff; }
+
+        @media (max-width: 750px) {
+            .main-catch { font-size: 2.5rem; padding-left: 20px; }
+            .main-catch span { font-size: 2.8rem; }
+            .magic-call { font-size: 2rem; }
+            .story-section, .item-core, .item-resonance { padding: 40px 20px !important; text-align: center; }
+            .luan-asset { position: static; display: block; margin: 0 auto 20px; width: 140px; height: auto; opacity: 1 !important; filter: none !important; }
+            .kana-name { display: block; margin: 5px 0; }
         }
-        .roadmap-title { color: var(--text-color); font-size: 2.2rem; margin-bottom: 25px; font-weight: 900; }
-
-        /* お問い合わせ */
-        .contact-section {
-            text-align: center; margin-bottom: 120px; padding-top: 80px;
-            border-top: 1px solid #ddd;
-        }
-        .contact-title { font-family: serif; color: var(--cyan-magic); font-size: 2.4rem; margin-bottom: 25px; font-weight: 200; }
-        .email-link {
-            color: var(--cyan-magic); font-size: 1.6rem; font-weight: 700;
-            text-decoration: none; border-bottom: 2px solid transparent; transition: 0.4s;
-        }
-        .email-link:hover { border-bottom: 2px solid var(--cyan-magic); opacity: 0.7; }
-
-        .tech-info { margin-top: 120px; padding: 40px; text-align: center; color: #999; font-size: 0.9rem; letter-spacing: 1px; }
-        footer { text-align: center; padding: 100px 20px 140px; border-top: 1px solid #eee; background: #fff; }
-
-        /* レスポンシブ対応 */
-        /* レスポンシブ対応：スマホではルアン君を「文字の上」に配置 */
-@media (max-width: 750px) {
-    .main-catch { font-size: 2.2rem; border-left: 10px solid var(--cyan-magic); padding-left: 20px; margin: 40px 0; line-height: 1.3; }
-    .magic-call { font-size: 1.5rem; letter-spacing: 1px; }
-    .magic-invite { font-size: 1.1rem; }
-
-    /* セクションのパディング調整（左右の余白を確保） */
-    .story-section, .item-core, .item-resonance { 
-        padding: 40px 20px !important; 
-        text-align: center; /* スマホでは中央寄せが綺麗です */
-    }
-
-    /* ★ルアン君を「縦並び」に調整：重ならずにハッキリ見える！ */
-    .luan-asset { 
-        position: static; /* 重なり（絶対配置）を解除 */
-        opacity: 1.0 !important; /* 100%の濃さ */
-        filter: none !important; /* 白黒解除 */
-        display: block;
-        margin: 0 auto 20px; /* 下に20pxの隙間を作って文字と離す */
-        width: 140px; /* スマホで邪魔にならないサイズ */
-        height: auto;
-    }
-
-    /* 文字が入る部分の余白（パディング）をリセット */
-    .story-section { padding-right: 20px !important; }
-    .item-core { padding-left: 20px !important; }
-    .item-resonance { padding-right: 20px !important; }
-    
-    .roadmap-title { font-size: 1.5rem; }
-}
     </style>
 </head>
 <body>
@@ -179,11 +141,10 @@
         </h1>
 
         <section class="concept-card">
-            <h2>Capture & Transformation</h2>
-            <p><strong>「特別な機材は不要。あなたのスマートフォンが、一瞬でスタジオに変わる。」</strong></p>
-            <p>OneClear.Cは、誰でも簡単にプロクオリティの音を手に入れられることを目指して開発されました。アプリを起動し、<strong>その場で撮影・録音を行うだけ。</strong></p>
-            <p>独自の信号処理エンジンがリアルタイムに近い精度で稼働し、曇った音やノイズを劇的に改善します。<strong>FFmpeg 6.1</strong>をベースとした圧倒的な演算能力が、これまでモバイルでは不可能とされていた「透明感のある音」を実現します。</p>
-            <p>利便性と有能性を高次元で両立させた、次世代のオーディオ・ビジュアルツールです。</p>
+            <h2>The Logic: Logic of Space</h2>
+            <span class="highlight-text">「特別な機材は不要。あなたのスマートフォンが、一瞬でスタジオに」</span>
+            <p>OneClear.Cは、既存のアプリのような「ただ音を大きくする」補正ではありません。プロの現場で用いられる<strong>『ステレオ・マスタリング』</strong>をモバイル向けに最適化。最新のFFmpegエンジンが、デバイスの負荷を抑えつつ、かつてない音の広がりを実現します。</p>
+            <p>すべては「シアンマジック」が導く、次世代のオーディオ体験のために。</p>
         </section>
 
         <div class="magic-call-container">
@@ -192,81 +153,83 @@
         </div>
 
         <div class="story-section">
-            <img src="luan1.png" class="luan-asset luan-story-img" alt="Luan Incantation">
-            <h2 class="story-title">Cyan Magic: Luan</h2>
+            <img src="luan1.png" class="luan-asset luan-story-img" alt="Luan">
+            <h2 class="story-title">Cyan Magic by Luan</h2>
+            
             <div class="luan-speech">
-                「はじめまして。僕はルアン。<br>
-                音楽、そして歌声の中に宿る『真実』を愛しているんだ。<br>
-                世界中に溢れる素敵な声を、もっと鮮明に、もっとたくさんの人に届けるお手伝いがしたくて、僕は君のところにやってきたよ。<br>
-                僕の『シアンマジック』をひと振りすれば、曇った音は晴れ、君の歌声はキラキラと輝き出すはずさ。さあ、一緒に新しい音の世界へ行こう。」
+                「はじめまして。ボクはルアン。音楽の中に眠る<strong>『純粋なる結晶（コア）』</strong>を愛しているんだ。ボクの魔法をひと振りすれば、君の歌声はクリスタルのように透き通り、輝き出すはずさ。」
             </div>
-            <p>OneClear.Cの深淵に潜む、音の守護者・ルアン。彼が司る魔法が、あなたの歌声に情熱の息吹を吹き込みます。</p>
+            <p>OneClear.Cの深淵に潜む音の守護者・ルアン。ルアンが司る魔法が、あなたの声に情熱の息吹を吹き込みます。</p>
+
+            <div class="luan-whisper">
+                「ふふ……ボクの『シアンマジック』の恩恵を受けられるなんて、君は運がいいね。この術式を展開すれば、世界を覆うノイズの霧は晴れ、真実の響きが顕現するのさ。」
+            </div>
         </div>
 
         <div class="preset-grid">
-            
             <div class="preset-item item-core">
-                <img src="luan2.png" class="luan-asset luan-core-img" alt="Luan Proud">
-                <span class="preset-name">Crystal Core（クリスタル・コア） <span class="badge">Standard</span></span>
+                <img src="luan2.png" class="luan-asset luan-core-img" alt="Luan Core">
+                <span class="preset-name">Crystal Core <span class="kana-name">（クリスタル・コア）</span><span class="badge">Standard</span></span>
+                
                 <div class="description-body">
-                    <p><strong>「OneClear.C サウンドを象徴する、核となるプリセット。」</strong></p>
-                    <p>このクオリティをすべてのベースとして、無限の『ワンクリアサウンド』が生まれる可能性を秘めています。独自のアルゴリズムを<strong>数ミリ単位</strong>で追い込み、1音1音を再構築するオリジナルサウンドの配合です。</p>
-                    
+                    <span class="highlight-text">OneClear.C サウンドを象徴する、核となるプリセット。</span>
+                    <p>左右の音響空間をナノ秒単位で再構築し、平坦な音に圧倒的な「奥行き」を授ける、すべての音の源流です。</p>
                     <ul class="pillar-list">
-                        <li><strong>密度 (Density):</strong> 音の隙間を埋め、豊かな存在感を宿らせる。</li>
-                        <li><strong>輪郭 (Outline):</strong> 曇りを排除し、クリスタルのような明瞭さを。</li>
-                        <li><strong>安定性 (Stability):</strong> いかなる音源でも破綻させない、強固な土台。</li>
+                        <li><strong>空間デザイン:</strong> ステレオマスタリングによる立体的ワイド感。</li>
+                        <li><strong>最適化された低負荷設計:</strong> 高度な独自チューニングでデバイス負担を最小限に。</li>
+                        <li><strong>密度の再定義:</strong> 濁りを排除し、クリスタルのような明瞭な芯を。</li>
                     </ul>
-                    <p>この3本柱を軸に磨き上げられたCrystal Coreこそが、OneClear.Cのアイデンティティであり、すべての音の源流です。</p>
                 </div>
-                <div class="incantation-box">
-                    <span class="rune-deco">ᚦ ᛝ ᚱ ᚴ ᛟ</span>
-                    <span class="incantation-text">「深淵の静寂を糧に、真実の響きを此処に。揺るぎなき『核』となりて、世界を射抜く光を綴れ。」</span>
+
+                <div class="luan-whisper">
+                    「ただのステレオだと思ったかい？ ボクが<strong>『刻の波紋（タイム・フェイズ）』</strong>に干渉して、音の粒子を左右の深淵へと解き放っておいたよ。複雑な術式（処理）をボクなりに編み直して、なるべく君のスマホに負担をかけないように調整してあるんだ。ボクの緻密な計算のおかげだね。感謝してよね！」
                 </div>
             </div>
 
             <div class="preset-item item-resonance">
-                <img src="luan3.png" class="luan-asset luan-resonance-img" alt="Luan Resonance image">
-                <span class="preset-name">Crystal Resonance（クリスタル・レゾナンス） <span class="badge badge-premium">Premium</span></span>
+                <img src="luan3.png" class="luan-asset luan-resonance-img" alt="Luan Resonance">
+                <span class="preset-name">Crystal Resonance <span class="kana-name">（クリスタル・レゾナンス）</span><span class="badge" style="background:#333">Premium</span></span>
+
                 <div class="description-body">
-                    <p><strong>「クリスタルコアの真価を解き放つ、至高の共鳴。」</strong></p>
-                    <p>Crystal Coreをベースに、よりプロフェッショナルな音質へと昇華させた上位プリセットです。</p>
-                    <p>制作者自らが、理想の響きを追い求めて<strong>ゼロから設計・ビルドした多数のオリジナルIR（インパルス応答）</strong>。その膨大なアーカイブの中から、Crystal Coreの『核』と最も美しく共鳴する<strong>至高の1つを厳選し、搭載</strong>しました。</p>
-                    <p>磨き抜かれたクリスタルのような共鳴（レゾナンス）。まだ誰も体験したことのない、次世代の響きをぜひ体感してください。</p>
+                    <span class="highlight-text">「その声は、研ぎ澄まされた宝石（クリスタル）へ。」</span>
+                    <p>Crystal Coreがもたらす『広がり』の先に、圧倒的な『密度』と『艶』を。Resonanceは、あなたの歌声を原石から輝く宝石へと昇華させる最高峰の術式です。</p>
+                    <p>独自ビルドされたAFIR（Advanced FIR）が、歌声の細かなニュアンスまでを拾い上げ、シルクのように滑らかで、かつ芯のあるリッチな響きを生成。聴く者の耳元で、あなたの吐息までが美しく共鳴し始めます。</p>
+                    
+                    <ul class="pillar-list">
+                        <li><strong>質感の再構築:</strong> ノイズ感を、透き通るような滑らかな質感へ。</li>
+                        <li><strong>至高のプレゼンス:</strong> 歌声が一歩前に出る圧倒的な存在感。</li>
+                        <li><strong>選ばれし共鳴:</strong> 選び抜かれた、オリジナル設計の響き。</li>
+                    </ul>
                 </div>
-                <div class="incantation-box">
-                    <span class="rune-deco">ᚨ ᚠ ᛁ ᚱ ᛋ ᛟ</span>
-                    <span class="incantation-text">「共鳴せよ、万物の深淵。時空の壁を越え、究極の空間を此処に再構成せん。シアンの閃光よ、虚空に響け。」</span>
+
+                <div class="luan-whisper" style="text-align: right;">
+                    「……気づいたかい？ ここからはボクの本気の術式だ。君の歌声の粒子を一つひとつ磨き上げて、最高の輝き（レゾナンス）を纏わせておいたよ。魔力（負荷）は使うけど、その対価として得られる響きは……もう、元の世界には戻れないほど美しいよ。シアンの真の輝き、震えて待ってて！」
                 </div>
             </div>
         </div>
 
         <section class="roadmap-section">
-            <div class="status-badge">COMING SOON</div>
-            <h2 class="roadmap-title">Android版、鋭意制作中。</h2>
-            <p>「OneClear.C」の魔法を、より多くの人の手元へ。<br>
-            現在、Androidデバイス向けに最適化されたアプリケーションをフルスピードで開発しています。<br>
-            リリースまで、今しばらく楽しみにお待ちください。</p>
+            <h2 style="color:var(--cyan-magic); font-size: 2rem; font-weight: 900;">Android版、鋭意制作中。</h2>
+            <p>OneClear.Cの魔法を、より多くの人の手元へ。<br>リリースまで、楽しみにお待ちください。</p>
+            
+            <div class="luan-whisper" style="max-width: 550px; text-align: center;">
+                「今は新しい世界（Android版）へのゲートを開いている最中だよ。時空の歪みを調整するのに少し時間がかかるけど……待つ価値のある『輝き』を約束するよ。シアンマジックの完成を、君もそこで見届けてよね。」
+            </div>
         </section>
 
-        <section class="contact-section">
-            <h2 class="contact-title">Contact</h2>
-            <p>アプリに関するお問い合わせ、フィードバック、またはシアンマジックへのメッセージはこちらまで。</p>
-            <a href="mailto:oneclear.c.official@gmail.com" class="email-link">oneclear.c.official@gmail.com</a>
+        <section class="contact-section" style="text-align: center; margin-bottom: 100px; padding-top: 60px; border-top: 1px solid #eee;">
+            <h2 style="font-family:serif; color:var(--cyan-magic); font-size: 2.5rem; letter-spacing: 2px;">Contact</h2>
+            <p>OneClear.Cへのご質問、またはシアンマジックへのメッセージはこちらまで。</p>
+            <a href="mailto:oneclearstudio.cyanm@gmail.com" style="color: var(--cyan-magic); font-size: 1.6rem; font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--cyan-magic); padding-bottom: 5px;">oneclear.c.official@gmail.com</a>
         </section>
-
-        <div class="tech-info">
-            Built with <strong>Flutter & Dart</strong> | Audio Engine: <strong>FFmpeg 6.1 Professional Build</strong> | Master of Sound: <strong>Tatsuya Yoshikawa</strong>
-        </div>
 
         <footer>
-    <div class="footer-copy">&copy; 2026 Cyan Magic Project</div>
-    <div class="footer-links" style="margin: 10px 0;">
-        <a href="privacy.html" style="color: #00B2B2; text-decoration: none; font-size: 0.8rem;">プライバシーポリシー</a>
+            <div class="footer-copy" style="font-weight: 700;">&copy; 2026 Cyan Magic Project</div>
+            <div class="footer-links" style="margin: 10px 0;">
+                <a href="privacy.html" style="color: #00B2B2; text-decoration: none; font-size: 0.85rem;">プライバシーポリシー</a>
+            </div>
+            <div class="footer-brand" style="color: #999; font-size: 0.9rem;">Product: OneClear.C | Master of Sound: ᚣᛟᛋᚻIᚳᚫᚹᚫ</div>
+        </footer>
     </div>
-    <div class="footer-brand">Product: OneClear.C | Engine: ᚣᛟᛋᚻIᚳᚫᚹᚫ</div>
-</footer>
-    </div>
-
 </body>
 </html>
