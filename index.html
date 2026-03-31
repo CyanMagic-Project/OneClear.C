@@ -41,6 +41,13 @@
         }
         .main-catch span { color: var(--cyan-magic); display: block; margin-top: 15px; font-size: 4rem; }
 
+        .concept-card {
+            background: #FFFFFF; padding: 55px; border-top: 5px solid var(--cyan-magic);
+            margin-bottom: 100px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+        }
+        .concept-card h2 { color: var(--cyan-magic); font-size: 1.8rem; margin-top: 0; font-weight: 800; }
+        .highlight-text { font-size: 1.4rem; font-weight: 800; color: var(--text-color); display: block; margin-bottom: 15px; }
+
         .magic-call-container { text-align: center; margin: 140px 0 100px; }
         .magic-call {
             font-size: 2.8rem; font-weight: 900; color: var(--cyan-magic);
@@ -70,13 +77,6 @@
             color: var(--cyan-magic);
         }
 
-        .concept-card {
-            background: #FFFFFF; padding: 55px; border-top: 5px solid var(--cyan-magic);
-            margin-bottom: 100px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
-        }
-        .concept-card h2 { color: var(--cyan-magic); font-size: 1.8rem; margin-top: 0; font-weight: 800; }
-        .highlight-text { font-size: 1.4rem; font-weight: 800; color: var(--text-color); display: block; margin-bottom: 15px; }
-
         .story-section {
             background: #FFFFFF; padding: 60px 240px 60px 60px;
             margin-bottom: 120px; position: relative; border-radius: 12px;
@@ -94,8 +94,8 @@
         .preset-item { background: #FFFFFF; padding: 55px; border-radius: 8px; border: 1px solid #eee; position: relative; }
         .item-core { padding-left: 180px; }
         .luan-core-img { width: 170px; left: -40px; bottom: 20px; }
-        .item-resonance { padding-right: 180px; }
-        .luan-resonance-img { width: 180px; right: -40px; bottom: -20px; }
+        .item-aura { padding-right: 180px; }
+        .luan-aura-img { width: 180px; right: -40px; bottom: -20px; }
 
         .preset-name { display: block; font-size: 2rem; font-weight: 900; color: var(--cyan-magic); margin-bottom: 15px; }
         .kana-name { font-size: 1rem; font-weight: 600; color: #888; margin-left: 10px; vertical-align: middle; }
@@ -120,7 +120,7 @@
             .main-catch { font-size: 2.5rem; padding-left: 20px; }
             .main-catch span { font-size: 2.8rem; }
             .magic-call { font-size: 2rem; }
-            .story-section, .item-core, .item-resonance { padding: 40px 20px !important; text-align: center; }
+            .story-section, .item-core, .item-aura { padding: 40px 20px !important; text-align: center; }
             .luan-asset { position: static; display: block; margin: 0 auto 20px; width: 140px; height: auto; opacity: 1 !important; filter: none !important; }
             .kana-name { display: block; margin: 5px 0; }
         }
@@ -136,14 +136,14 @@
     <div class="container">
         
         <h1 class="main-catch">
-            スマホ録音を、<br>
-            <span>プロスタジオのクオリティへ。</span>
+            スマートフォンでの録音が<br>
+            <span>まるでプロスタジオに。</span>
         </h1>
 
         <section class="concept-card">
-            <h2>The Logic: Logic of Space</h2>
-            <span class="highlight-text">「特別な機材は不要。あなたのスマートフォンが、一瞬でスタジオに」</span>
-            <p>OneClear.Cは、既存のアプリのような「ただ音を大きくする」補正ではありません。プロの現場で用いられる<strong>『ステレオ・マスタリング』</strong>をモバイル向けに最適化。最新のFFmpegエンジンが、デバイスの負荷を抑えつつ、かつてない音の広がりを実現します。</p>
+            <h2>The Logic: Optimization for Creators</h2>
+            <span class="highlight-text">「音楽の録音、音楽配信などを行うすべての方へ。あなたのスマートフォンが、一瞬でスタジオに」</span>
+            <p>OneClear.Cは、既存のアプリのような画一的な補正ではなく、プロの現場で用いられる<strong>『ステレオ・マスタリング』</strong>をモバイル向けに独自最適化。<strong>使用するデバイスそれぞれの特性に合わせて最適かつ最大限の音質パフォーマンスを引き出します。</strong></p>
             <p>すべては「シアンマジック」が導く、次世代のオーディオ体験のために。</p>
         </section>
 
@@ -157,7 +157,7 @@
             <h2 class="story-title">Cyan Magic by Luan</h2>
             
             <div class="luan-speech">
-                「はじめまして。ボクはルアン。音楽の中に眠る<strong>『純粋なる結晶（コア）』</strong>を愛しているんだ。ボクの魔法をひと振りすれば、君の歌声はクリスタルのように透き通り、輝き出すはずさ。」
+                「はじめまして。ボクはルアン。音の中に眠る<strong>『純粋なる結晶（コア）』</strong>を愛しているんだ。ボクの魔法をひと振りすれば、君の歌声はクリスタルのように透き通り、輝き出すはずさ。」
             </div>
             <p>OneClear.Cの深淵に潜む音の守護者・ルアン。ルアンが司る魔法が、あなたの声に情熱の息吹を吹き込みます。</p>
 
@@ -172,45 +172,46 @@
                 <span class="preset-name">Crystal Core <span class="kana-name">（クリスタル・コア）</span><span class="badge">Standard</span></span>
                 
                 <div class="description-body">
-                    <span class="highlight-text">OneClear.C サウンドを象徴する、核となるプリセット。</span>
-                    <p>左右の音響空間をナノ秒単位で再構築し、平坦な音に圧倒的な「奥行き」を授ける、すべての音の源流です。</p>
+                    <span class="highlight-text">歌声を鮮明に強調し、芯のある「乾いた音」を届ける。</span>
+                    <p>OneClear.Cの核となるプリセット。<strong>ボーカルの輪郭を際立たせ、歌声を一歩前へと押し出す</strong>サウンドデザインが最大の特徴です。</p>
+                    <p>左右の音響空間を再構築しながらも、中心にある「声」のエネルギーを逃がしません。解像度が高く、ソリッドで乾いた質感を好む方や、配信・弾き語りで自分の声をストレートに響かせたい方に最適です。</p>
                     <ul class="pillar-list">
+                        <li><strong>歌声の強調:</strong> ボーカル帯域を緻密にコントロールし、圧倒的な存在感を。</li>
                         <li><strong>空間デザイン:</strong> ステレオマスタリングによる立体的ワイド感。</li>
-                        <li><strong>最適化された低負荷設計:</strong> 高度な独自チューニングでデバイス負担を最小限に。</li>
-                        <li><strong>密度の再定義:</strong> 濁りを排除し、クリスタルのような明瞭な芯を。</li>
+                        <li><strong>性能の極限抽出:</strong> 各デバイスに合わせた最適化で負担を抑え、品質を最大化。</li>
                     </ul>
                 </div>
 
                 <div class="luan-whisper">
-                    「ただのステレオだと思ったかい？ ボクが<strong>『刻の波紋（タイム・フェイズ）』</strong>に干渉して、音の粒子を左右の深淵へと解き放っておいたよ。複雑な術式（処理）をボクなりに編み直して、なるべく君のスマホに負担をかけないように調整してあるんだ。ボクの緻密な計算のおかげだね。感謝してよね！」
+                    「ただのステレオだと思ったかい？ ボクが君の歌声をクリスタルのように研ぎ澄ましておいたよ。このソリッドで芯のある響き……君の声が世界に真っ直ぐ届く魔法さ。ボクの緻密な計算のおかげだね。感謝してよね！」
                 </div>
             </div>
 
-            <div class="preset-item item-resonance">
-                <img src="luan3.png" class="luan-asset luan-resonance-img" alt="Luan Resonance">
-                <span class="preset-name">Crystal Resonance <span class="kana-name">（クリスタル・レゾナンス）</span><span class="badge" style="background:#333">Premium</span></span>
+            <div class="preset-item item-aura">
+                <img src="luan3.png" class="luan-asset luan-aura-img" alt="Luan Aura">
+                <span class="preset-name">Crystal Aura <span class="kana-name">（クリスタル・オーラ）</span><span class="badge" style="background:#333">Premium</span></span>
 
                 <div class="description-body">
-                    <span class="highlight-text">「その声は、研ぎ澄まされた宝石（クリスタル）へ。」</span>
-                    <p>Crystal Coreがもたらす『広がり』の先に、圧倒的な『密度』と『艶』を。Resonanceは、あなたの歌声を原石から輝く宝石へと昇華させる最高峰の術式です。</p>
-                    <p>独自ビルドされたAFIR（Advanced FIR）が、歌声の細かなニュアンスまでを拾い上げ、シルクのように滑らかで、かつ芯のあるリッチな響きを生成。聴く者の耳元で、あなたの吐息までが美しく共鳴し始めます。</p>
+                    <span class="highlight-text">「その声は、あなたを優しく包み込む『聖域（オーラ）』へ。」</span>
+                    <p>ソリッドなCrystal Coreに対し、<strong>Auraは豊潤な「ウェット感」と「包容力」を追求しました。</strong>質感は違えどOneClearらしいサウンドを是非お試し下さい。</p>
+                    <p>シアンマジック独自の音響アルゴリズムが、シルクのように滑らかで潤いのある響きを生成。優しさの中に、揺るぎない力強さを秘めた、没入感溢れる音響体験を提供します。</p>
                     
                     <ul class="pillar-list">
-                        <li><strong>質感の再構築:</strong> ノイズ感を、透き通るような滑らかな質感へ。</li>
-                        <li><strong>至高のプレゼンス:</strong> 歌声が一歩前に出る圧倒的な存在感。</li>
-                        <li><strong>選ばれし共鳴:</strong> 選び抜かれた、オリジナル設計の響き。</li>
+                        <li><strong>ウェットな質感:</strong> 潤いと艶のあるリッチな響きへ。</li>
+                        <li><strong>包容する空間:</strong> 包み込まれるような、優しく深い没入感。</li>
+                        <li><strong>優しさと力強さ:</strong> 繊細な吐息を拾い上げつつ、芯の通った力強い存在感を。</li>
                     </ul>
                 </div>
 
                 <div class="luan-whisper" style="text-align: right;">
-                    「……気づいたかい？ ここからはボクの本気の術式だ。君の歌声の粒子を一つひとつ磨き上げて、最高の輝き（レゾナンス）を纏わせておいたよ。魔力（負荷）は使うけど、その対価として得られる響きは……もう、元の世界には戻れないほど美しいよ。シアンの真の輝き、震えて待ってて！」
+                    「……気づいたかい？ ここからはボクの本気の術式だ。乾いた音をシアンの雫で潤して、優しく、でも力強く君を包み込む『オーラ』を纏わせておいたよ。この魔法のフィールドに触れたら、もう元の世界には戻れないからね。」
                 </div>
             </div>
         </div>
 
         <section class="roadmap-section">
             <h2 style="color:var(--cyan-magic); font-size: 2rem; font-weight: 900;">Android版、鋭意制作中。</h2>
-            <p>OneClear.Cの魔法を、より多くの人の手元へ。<br>リリースまで、楽しみにお待ちください。</p>
+            <p>OneClear.Cのシアンマジックを、より多くの人の手元へ。<br>リリースまで、楽しみにお待ちください。</p>
             
             <div class="luan-whisper" style="max-width: 550px; text-align: center;">
                 「今は新しい世界（Android版）へのゲートを開いている最中だよ。時空の歪みを調整するのに少し時間がかかるけど……待つ価値のある『輝き』を約束するよ。シアンマジックの完成を、君もそこで見届けてよね。」
